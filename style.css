@@ -1,0 +1,118 @@
+/* ==========================================
+   CẤU HÌNH CƠ BẢN & ĐỘ TƯƠNG PHẢN MÀU (WAVE)
+   ========================================== */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #ffffff;
+    /* FIX LỖI WAVE: Đảm bảo màu chữ xám đậm trên nền trắng có độ tương phản > 4.5:1 */
+    color: #212529; 
+}
+
+/* Định dạng cho liên kết Skip to Main Content */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #0056b3;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.2s;
+}
+
+/* Hiển thị Skip Link khi người dùng dùng phím Tab để lướt web */
+.skip-link:focus {
+    top: 0;
+}
+
+/* ------------------------------------------
+   YÊU CẦU 1: Comment out kiểu dáng cũ của li 
+   ------------------------------------------ */
+/* li {
+    color: blue;
+    font-weight: bold;
+}
+*/
+
+/* ------------------------------------------
+   YÊU CẦU 2: Cấu hình thanh điều hướng (nav) 
+   ------------------------------------------ */
+nav {
+    display: inline-block;
+    width: 80%;
+    background-color: #f8f9fa;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+/* YÊU CẦU 3: Dùng descendant selector để style RIÊNG ảnh trong nav */
+nav img {
+    width: 10%;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+nav a {
+    margin-right: 15px;
+    color: #0056b3; /* Tăng độ đậm của màu link để vượt qua kiểm tra màu WAVE */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ------------------------------------------
+   YÊU CẦU 4 & 5: Cấu hình phân hệ CSS Grid 
+   ------------------------------------------ */
+.grid {
+    display: grid;
+    /* Thiết lập lưới 2 cột, mỗi cột xấp xỉ 40% */
+    grid-template-columns: 40% 40%;
+    /* Sử dụng các thuộc tính để căn chỉnh khoảng cách theo screenshot mẫu */
+    justify-content: space-around;
+    align-items: start;
+    row-gap: 25px;
+    margin-bottom: 40px;
+}
+
+/* YÊU CẦU 6: Dùng descendant selector chỉnh ảnh trong .grid chiếm 100% 
+   (Đảm bảo KHÔNG ảnh hưởng tới các hình ảnh thuộc class .flex) */
+.grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.grid-item {
+    background-color: #fdfdfd;
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+}
+
+/* ------------------------------------------
+   YÊU CẦU 7: Cấu hình phân hệ CSS Flexbox 
+   ------------------------------------------ */
+.flex {
+    display: flex;
+    /* Áp dụng các thuộc tính theo yêu cầu bài tập */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.flex-item {
+    flex: 1 1 28%; /* Tự động co giãn linh hoạt quanh mức 28% */
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* Ảnh của phần flexbox giữ nguyên kích thước tự nhiên để đối chiếu */
+.flex-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}

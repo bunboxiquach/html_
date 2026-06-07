@@ -3,55 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Học Lập Trình Front-End Cho Người Mới Bắt Đầu</title>
+    <title>Giao Diện Tối Ưu Với Grid Và Flexbox</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Lộ Trình Trở Thành Front-End Developer</h1>
-        <p>Chào mừng bạn đến với trang tổng hợp kiến thức nền tảng về phát triển giao diện web.</p>
-    </header>
+    <a href="#main-content" class="skip-link">Skip to Main Content</a>
 
-    <main>
+    <nav>
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=100" alt="Logo hệ thống học tập">
+        <a href="#">Trang chủ</a>
+        <a href="#">Khám phá</a>
+        <a href="#">Liên hệ</a>
+    </nav>
+
+    <main id="main-content">
         
-        <h2>Các Công Nghệ Cốt Lõi Cần Lập Trình</h2>
-        <p>Để xây dựng một trang web hoàn chỉnh, bạn bắt buộc phải làm chủ bộ ba công cụ nền tảng dưới đây:</p>
-
-        <ul>
-            <li><strong>HTML5:</strong> Định nghĩa cấu trúc và ngữ nghĩa của nội dung trang web.</li>
-            <li><strong>CSS3:</strong> Thiết kế giao diện, màu sắc, bố cục và hiệu ứng chuyển động.</li>
-            <li><strong>JavaScript:</strong> Xử lý các logic tương tác phức tạp và kết nối dữ liệu.</li>
-        </ul>
-
-        <h2>Tài Nguyên Minh Họa Hữu Ích</h2>
-        <p>Dưới đây là một số hình ảnh trực quan mô phỏng cấu trúc cấu thành nên giao diện web hiện đại:</p>
-
-        <section>
-            <h3>1. Cấu trúc HTML5</h3>
-            <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=500" 
-                 alt="Mã nguồn HTML hiển thị cấu trúc thẻ trên màn hình máy tính lớp học" 
-                 width="500" height="300">
-
-            <h3>2. Định dạng giao diện với CSS</h3>
-            <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=500" 
-                 alt="Thiết kế giao diện người dùng hiển thị trên màn hình laptop đặt trên bàn làm việc" 
-                 width="500" height="300">
-
-            <h3>3. Lập trình logic JavaScript</h3>
-            <img src="https://images.unsplash.com/photo-1581291518655-9523c932dedf?w=500" 
-                 alt="Bàn tay kỹ sư đang gõ các đoạn mã script xử lý logic phần mềm" 
-                 width="500" height="300">
+        <h1>Khám Phá Các Thành Phố Và Công Viên</h1>
+        
+        <h2>Danh Sách Địa Điểm Nổi Bật (CSS Grid)</h2>
+        <section class="grid">
+            <div class="grid-item">
+                <h3>Thành Phố Đà Nẵng</h3>
+                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500" alt="Cầu Rồng Đà Nẵng phun lửa về đêm">
+                <p>Đà Nẵng là trung tâm kinh tế, văn hóa lớn của khu vực Miền Trung với nhiều danh lam thắng cảnh nổi tiếng.</p>
+            </div>
+            <div class="grid-item">
+                <h3>Thành Phố Hà Nội</h3>
+                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500" alt="Tháp Rùa cổ kính giữa lòng Hồ Gươm Hà Nội">
+                <p>Thủ đô Hà Nội ngàn năm văn hiến mang vẻ đẹp yên bình, trầm mặc cùng nhịp sống văn hóa sâu sắc.</p>
+            </div>
         </section>
 
-        <h2>Tài Liệu Tham Khảo Nâng Cao</h2>
-        <p>Bạn có thể tra cứu chi tiết tài liệu học tập chính quy tại hệ thống tiêu chuẩn thế giới 
-           <a href="https://www.w3schools.com" target="_blank" rel="noopener noreferrer">W3Schools Online Web Tutorials</a>.
-        </p>
+        <h2>Hình Ảnh Công Viên (CSS Flexbox)</h2>
+        <section class="flex">
+            <div class="flex-item">
+                <img src="https://images.unsplash.com/photo-1519331379826-f10be5486c6f?w=400" alt="Lối đi bộ rợp bóng cây xanh tại công viên trung tâm">
+                <p>Công viên A</p>
+            </div>
+            <div class="flex-item">
+                <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=400" alt="Ánh nắng xuyên qua các tán lá cây đại thụ trong rừng quốc gia">
+                <p>Công viên B</p>
+            </div>
+            <div class="flex-item">
+                <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=400" alt="Bãi cỏ xanh mướt trải dài dưới bầu trời trong xanh">
+                <p>Công viên C</p>
+            </div>
+        </section>
+
+        <h2>Danh Sách Kiểm Tra Kỹ Năng</h2>
+        <ul>
+            <li>Thiết kế bố cục Grid 2 cột cân xứng.</li>
+            <li>Ứng dụng Flexbox linh hoạt để xử lý responsive dữ liệu.</li>
+            <li>Tối ưu hóa khả năng tiếp cận công nghệ hỗ trợ (WAVE).</li>
+        </ul>
 
     </main>
 
     <footer>
-        <p>&copy; 2026 Trang web học tập cá nhân. Được xây dựng tuân thủ tiêu chuẩn W3C và WAVE.</p>
+        <p>&copy; 2026 Bài tập thực hành cấu trúc CSS nâng cao.</p>
     </footer>
 
 </body>
